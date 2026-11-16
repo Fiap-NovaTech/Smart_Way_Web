@@ -43,3 +43,4 @@ function lotacaoVagao() {
         alert("Vagão inválido! Digite um número de 1 a 6.");
     }
 }
+

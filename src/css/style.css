@@ -9,7 +9,8 @@
     --cor-titulo: #1d1d1f;        
     --cor-principal: #5160e4;      
     --cor-texto-botao: #ffffff;    
-    --cor-sucesso: #28cd41;        
+    --cor-sucesso: #28cd41;
+    --cor-erro: #c0392b;        
 
     --fonte-titulo: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Inter", sans-serif;
     --fonte-texto: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Inter", sans-serif;
@@ -289,3 +290,115 @@ img {
 }
 
 .botao:hover { opacity: 0.85; }
+
+
+/* ---------- Página de contato ---------- */
+.contato {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+.contato-texto {
+    flex: 1 1 300px;
+}
+
+.contato-texto h1 {
+    margin: 20px 0;
+    font-size: 48px;
+}
+
+.contato-texto p {
+    color: var(--cor-texto-suave);
+    font-size: 18px;
+}
+
+.formulario {
+    flex: 1 1 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 32px;
+    border-radius: 24px;
+    background-color: var(--cor-cartao);
+    box-shadow: 0 10px 30px rgba(81, 96, 228, 0.12);
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.campo label {
+    color: var(--cor-titulo);
+    font-weight: 600;
+}
+
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #c9c9e0;
+    border-radius: 12px;
+    background-color: #f7f7fc;
+    color: var(--cor-texto);
+    font-family: var(--fonte-texto);
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+.campo textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.campo input:focus,
+.campo textarea:focus {
+    outline: none;
+    border-color: var(--cor-principal);
+    background-color: var(--cor-cartao);
+    box-shadow: 0 0 0 3px rgba(81, 96, 228, 0.2);
+}
+
+.campo .campo-invalido {
+    border-color: var(--cor-erro);
+}
+
+.erro {
+    min-height: 1.2em;
+    color: var(--cor-erro);
+    font-size: 14px;
+}
+
+.botao-enviar {
+    align-self: flex-start;
+    margin: 4px 0 0;
+    padding: 12px 28px;
+    border-radius: 20px;
+    font-weight: 600;
+}
+
+.mensagem-sucesso {
+    color: #1a8a2e;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+    .contato {
+        gap: 10px;
+    }
+
+    .contato-texto h1 {
+        font-size: 34px;
+    }
+
+    .formulario {
+        padding: 24px 20px;
+    }
+
+    .botao-enviar {
+        align-self: stretch;
+    }
+}
