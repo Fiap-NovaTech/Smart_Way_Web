@@ -35,14 +35,38 @@
         </div>
     </header>
 
-    <main>
-        <div class="tela tela-inicial">
-            <div class="container">
-                <h1><span class="destaque">Arquitetura</span></h1>
-                <p>Escreva aqui como a Smart Way funciona.</p>
+        <main>
+            <div class="tela tela-inicial">
+                <div class="container inicio">
+                    <div class="inicio-texto">
+                        <h1><span class="destaque">Arquitetura</span></h1>
+                        <p>
+                            A Smart Way funciona em quatro etapas:
+                            <br>
+                            <br>
+                            <strong>1. Monitorar:</strong> coleta dados das linhas e dos sensores dos vagões.<br>
+                            <strong>2. Analisar:</strong> identifica atrasos, falhas e superlotação.<br>
+                            <strong>3. Decidir:</strong> escolhe a melhor ação para cada problema.<br>
+                            <strong>4. Agir:</strong> avisa os passageiros e a equipe de operação.
+                        </p>
+
+                        <!-- CARROSSEL -->
+                        <div class="carrossel" id="carrossel">
+                            <div class="carrossel-slides">
+                                <img class="slide slide-ativo" src="../assets/Problema.jpg" alt="Plataforma do metrô de São Paulo">
+                                <img class="slide" src="../assets/Tecnologia.jpg" alt="Tecnologia usada para monitorar os vagões">
+                                <img class="slide" src="../assets/Publico.jpg" alt="Passageiros usando o metrô">
+                            </div>
+
+                            <button class="carrossel-seta carrossel-anterior" id="anterior" aria-label="Imagem anterior">&#10094;</button>
+                            <button class="carrossel-seta carrossel-proximo" id="proximo" aria-label="Próxima imagem">&#10095;</button>
+
+                            <div class="carrossel-pontos" id="pontos"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </main>
+        </main>
 
     <!-- RODAPÉ -->
     <footer class="rodape">
