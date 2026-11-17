@@ -44,23 +44,33 @@ function lotacaoVagao() {
     }
 }
 
-const imagens = document.querySelectorAll(".slideshow img");
 
-let indice = 0;
+let carrossel = document.getElementById("carrossel");
 
-function slideShow() {
-    imagens[indice].classList.remove("active");
+if (carrossel) {
+    let slides = document.querySelectorAll(".slide");
+    let atual = 0;
 
-    indice++;
+    function mostrarSlide(numero) {
 
-    if (indice >= imagens.length) {
-        indice = 0;
+        if (numero >= slides.length) {
+            numero = 0;
+        } else if (numero < 0) {
+            numero = slides.length - 1;
+        }
+
+        slides[atual].classList.remove("slide-ativo");
+
+        atual = numero;
+
+        slides[atual].classList.add("slide-ativo");
     }
 
-    imagens[indice].classList.add("active");
-}
+    document.getElementById("anterior").addEventListener("click", function () {
+        mostrarSlide(atual - 1);
+    });
 
-// Só inicia se a página tiver slideshow
-if (imagens.length > 0) {
-    setInterval(slideShow, 3000);
+    document.getElementById("proximo").addEventListener("click", function () {
+        mostrarSlide(atual + 1);
+    });
 }

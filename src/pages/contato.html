@@ -57,7 +57,8 @@
 
                     <div class="campo">
                         <label for="mensagem">Mensagem</label>
-                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" required></textarea>
+                        <textarea id="mensagem" name="mensagem" rows="5" placeholder="Escreva sua mensagem" maxlength="300" required></textarea>
+                        <span class="contador" id="contador">0 / 300</span>
                     </div>
 
                     <button type="submit" class="botao botao-enviar">Enviar mensagem</button>
