@@ -385,6 +385,12 @@ img {
     font-weight: 600;
 }
 
+.contador {
+    align-self: flex-end;
+    color: var(--cor-texto-suave);
+    font-size: 12px;
+}
+
 @media (max-width: 600px) {
     .contato {
         gap: 10px;
