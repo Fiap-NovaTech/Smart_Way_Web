@@ -74,3 +74,12 @@ if (carrossel) {
         mostrarSlide(atual + 1);
     });
 }
+
+let campoMensagem = document.getElementById("mensagem");
+let contador = document.getElementById("contador");
+
+if (campoMensagem && contador) {
+    campoMensagem.addEventListener("input", function () {
+        contador.textContent = campoMensagem.value.length + " / 300";
+    });
+}
