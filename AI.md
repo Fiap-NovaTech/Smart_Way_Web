@@ -1,1 +1,1 @@
-A IA (Claude) foi utilizada para corrigir códigos quebrados que a equipe não conseguiu solucionar:
+A IA (Claude) foi utilizada para entender como a fuincionalidade carrossel funcionava:
