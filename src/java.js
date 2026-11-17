@@ -83,3 +83,18 @@ if (campoMensagem && contador) {
         contador.textContent = campoMensagem.value.length + " / 300";
     });
 }
+
+// ---------- SAUDAÇÃO ----------
+let saudacao = document.getElementById("saudacao");
+
+if (saudacao) {
+    let hora = new Date().getHours();
+
+    if (hora < 12) {
+        saudacao.textContent = "Bom dia! Confira o metrô antes de sair.";
+    } else if (hora < 18) {
+        saudacao.textContent = "Boa tarde! Veja como estão as linhas agora.";
+    } else {
+        saudacao.textContent = "Boa noite! Planeje sua volta para casa.";
+    }
+}
