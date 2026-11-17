@@ -44,3 +44,23 @@ function lotacaoVagao() {
     }
 }
 
+const imagens = document.querySelectorAll(".slideshow img");
+
+let indice = 0;
+
+function slideShow() {
+    imagens[indice].classList.remove("active");
+
+    indice++;
+
+    if (indice >= imagens.length) {
+        indice = 0;
+    }
+
+    imagens[indice].classList.add("active");
+}
+
+// Só inicia se a página tiver slideshow
+if (imagens.length > 0) {
+    setInterval(slideShow, 3000);
+}
